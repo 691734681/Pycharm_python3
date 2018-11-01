@@ -1,12 +1,10 @@
 #!/usr/local/python3.5/bin
 # -*-  coding:utf-8 -*-
 
-
-user = 'alex'
-pwd = '123'
-v = user == 'lex' and pwd == '123' or 1==1 and pwd == '123' and 1 == 1
+li = {'k1':'v1','k2':'v2','k3':'v3'}
+v = '_'.join(li.values())
 print(v)
 
-a = "0011"
-v = int(a,base = 16)
-print(v)
+s = 'abc'
+s = s.replace('a','A')
+print(s)
