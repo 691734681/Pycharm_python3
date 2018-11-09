@@ -3,6 +3,7 @@
 
 import random
 
+
 # 执行 Python 脚本的两种方式
 """
 python 文件名
@@ -19,8 +20,11 @@ python 文件名
 
 """
 
-# 请写出  “李杰”  分别用 utf-­‐8 和 gbk 编码所占的位数
-
+# 请写出  “李杰”  分别用 utf-8 和 gbk 编码所占的位数
+"""
+utf-8中一个字符占3个字节，所以占6位
+gbk中一个字符占2个字节，所以占4位
+"""
 
 # Pyhton 单行注释和多行注释分别用什么？
 """
@@ -52,6 +56,7 @@ alex
 Alex
 """
 
+"""
 # 写代码，有如下变量，请按照要求实现每个功能
 #     name  =  "  aleX"
 name = '   aleX'
@@ -94,7 +99,7 @@ print('_'.join(li))
 #     b.  利用下划线将列表的每一个元素拼接成字符串，li  ＝  ['alex',  'eric',  'rain']    （可选）
 li = ['alex','eric','rain']
 print('_'.join(li))
-
+"""
 # Python2 中的 range 和 Python3 中的 range 的区别？
 """
 python2中range会生成一个序列
@@ -168,10 +173,9 @@ def check_code():
 		checkcode += str(temp)
 	return checkcode
 
-code = check_code()
-print(code)
-
 while True:
+	code = check_code()
+	print(code)
 	s = input('enter the code')
 	if s == code:
 		break
@@ -193,13 +197,17 @@ print(v)
 # 制作表格  
 #     循环提示用户输入：用户名、密码、邮箱  （要求用户输入的长度不超过 20 个字符，如果超过则只有前 20 个字符有效）
 # 如果用户输入  q 或 Q  表示不再继续输入，将用户输入的内容以表格形式打印
-"""
-l = []
-for i in range(3):
-	s = input()
-	l.append(s)
 
-s = '\\t'.join(l)
-print(s)
+s = ""
+while True:
+	f = input("q is quit")
+	if f == 'q':
+		break
+	name = input()
+	pswd = input()
+	mail = input()
+	template = "{}\t{}\t{}\t\n"
+	t = template.format(name,pswd,mail)
+	s = s + t
+
 print(s.expandtabs(20))
-"""
