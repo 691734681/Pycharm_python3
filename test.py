@@ -1,12 +1,9 @@
 #!/usr/local/python3.5/bin
 # -*-  coding:utf-8 -*-
 
-name = 'alex'
-def foo():
-	name = 'linhaifeng'
-	def bar():
-		print(name)
-	return bar
-
-res = foo()
-print(res)
+dic = {'alex':300,'wupeiqi':100,'yuanhao':200}
+res = zip(dic.values(),dic.keys())
+l = list(res)
+print(l)
+sorted(l,key = lambda t : t[0])
+print(l)

@@ -58,3 +58,15 @@ age_dic = {'age1':18,'age4':20,'age3':100,'age2':30}
 res = zip(age_dic.values(),age_dic.keys())
 res2 = list(res)
 print(max(res2))
+
+
+# 取值年龄最大的记录
+people = [
+	{'name':'alex','age':1000},
+	{'name':'wupeiqi','age':10000},
+	{'name':'yuanhao','age':9000},
+	{'name':'linhaifeng','age':18}
+]
+print(max(people,key = lambda dic : dic['age']))
+
+
