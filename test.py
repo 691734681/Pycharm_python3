@@ -1,10 +1,10 @@
 #!/usr/local/python3.5/bin
 # -*-  coding:utf-8 -*-
 
-from functools import reduce
-l = [1,2,3,4,5]
-print(reduce(lambda x,y:x - y,l))
+import requests
+import json
 
-print(['a' for i in range(10)])
+r = requests.get('http://ip.taobao.com/service/getIpInfo.php?ip=115.239.211.112')
 
-print('test conflict')
+print(r.text)
+print(json.dumps(r.json(),ensure_ascii = False, indent = 5))
