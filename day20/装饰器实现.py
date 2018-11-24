@@ -19,4 +19,5 @@ def test():
 	print('test函数运行结束')
 
 # test = timer(test)
-# test()
+test()
+
