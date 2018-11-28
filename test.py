@@ -10,3 +10,4 @@ while year <= numberyear:
     print('%3d  %0.2f' % (year,principal))
     year += 1
 
+print('test')
