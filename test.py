@@ -1,17 +1,14 @@
 #!/usr/local/python3.5/bin
 # -*-  coding:utf-8 -*-
 
-def func():
-    print('ok')
-    x = 10
-    print(x)
-    x = yield 1
-    print(x)
-    yield x
+globals = {
+    'x':7,
+    'y':10,
+    'birds':['Parrot','Swallow','Albatross']
+}
+locals = {}
 
-f = func()
-r = next(f)
-print(r)
-
-r2 = f.send('eee')
-print(r2)
+a = eval('3 * x + 4 * y',globals,locals)
+print(a)
+print(globals)
+#print(locals)
