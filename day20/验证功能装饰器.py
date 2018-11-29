@@ -31,7 +31,6 @@ def auth_func(func):
 				return res
 		else:
 			print('用户名或密码错误')
-
 	return wrapper
 
 
