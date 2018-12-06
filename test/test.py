@@ -1,37 +1,34 @@
 #!/usr/local/python3.5/bin
 # -*-  coding:utf-8 -*-
 
-import random
+import pprint
 
-class Account():
-    num_account = 0
-    def __init__(self,name,balance):
-        self.name = name
-        self.balance = balance
-        Account.num_account += 1
-    def __del__(self):
-        Account.num_account -= 1
-    def deposit(self,amt):
-        self.balance = self.balance + amt
-    def withdraw(self,amt):
-        self.balance = self.balance - amt
-    def inquiry(self):
-        return self.balance
+f = open('test')
+datas = f.readlines()
+print(type(datas))
+pprint.pprint(datas)
+f.close()
 
-class EvilAccount(Account):
-    def __init__(self,name,balance,evilfactor):
-        #Account.__init__(self,name,balance)
-        super().__init__(name,balance)
-        #super(EvilAccount,self).__init__(name,balance)
-        self.evilfactor = evilfactor
-    def inquiry(self):
-        if random.randint(0,4) == 1:
-            return self.balance * self.evilfactor
-        else:
-            #return self.balance
-            return super().inquiry()
+print('*' * 60)
+print('*' * 60)
+print('*' * 60)
+print('*' * 60)
+print('*' * 60)
 
-c = EvilAccount('George',1000.00,1.1)
-c.deposit(10.0)
-available = c.inquiry()
-print(available)
+l = []
+
+for data in datas:
+    if data in l:
+        continue
+    else:
+        l.append(data)
+
+pprint.pprint(l)
+
+f = open('test2.txt','w',encoding = 'utf-8')
+for i in l:
+    f.write(i)
+
+
+
+
