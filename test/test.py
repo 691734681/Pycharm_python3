@@ -1,7 +1,5 @@
 #!/usr/local/python3.5/bin
 # -*-  coding:utf-8 -*-
 
-n = 100
+import pickle
 
-def foo():
-    print('it is foo and n is %s' % n)
