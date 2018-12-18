@@ -60,5 +60,10 @@ while True:
         res.append(temp.pop())
 
 print(res)
-
 print(' '.join(res))
+
+"""
+中缀表达式变前缀表达式的原则变后缀表达式一样，只是遍历列表的时候是从后往前
+左右括号的规则相反
+"""
+
