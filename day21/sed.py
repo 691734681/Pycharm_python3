@@ -4,19 +4,19 @@
 # 对haproxy.conf文件的增删改查
 
 # 查询
-def fetch():
+def fetch(data):
 	print('这是查询功能：')
 
 # 添加
-def add():
+def add(data):
 	print('这是增加功能：')
 
 # 更改
-def change():
+def change(data):
 	print('这是更改功能：')
 
 # 删除
-def delete():
+def delete(data):
 	print('这是删除功能')
 
 if __name__ == '__main__':
@@ -37,11 +37,13 @@ if __name__ == '__main__':
 
 	while True:
 		print(msg)
-		choice = input('请输入你的选项：').strip()
+		choice = input('请输入你的选项: ').strip()
 		if not choice:
 			print('你没有输入任何内容，请继续')
 			continue
 		if choice == '5':
 			break
 
-		msg_dic[choice]()
+		data = input('输入你要查询/添加/修改/删除的内容: ')
+
+		msg_dic[choice](data)
