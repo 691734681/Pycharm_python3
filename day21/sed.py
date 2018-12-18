@@ -7,9 +7,11 @@
 def fetch(data):
 	print('这是查询功能：')
 
+
 # 添加
 def add(data):
 	print('这是增加功能：')
+
 
 # 更改
 def change(data):
@@ -21,11 +23,13 @@ def delete(data):
 
 if __name__ == '__main__':
 	msg = """
+	**********
 		1.查询
 		2.添加
 		3.修改
 		4.删除
 		5.退出
+	**********
 	"""
 
 	msg_dic = {
@@ -46,4 +50,4 @@ if __name__ == '__main__':
 
 		data = input('输入你要查询/添加/修改/删除的内容: ')
 
-		msg_dic[choice](data)
+		res = msg_dic[choice](data)

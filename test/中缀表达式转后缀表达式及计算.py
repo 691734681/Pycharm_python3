@@ -34,11 +34,9 @@ for i in l:
                     if t == '(' or len(temp) == 0:
                         break
                     res.append(t)
-
-            if i in ['*','/','(']:
+            elif i in ['*','/','(']:
                 temp.append(i)
-
-            if i in ['+','-'] and temp[-1] in ['*','/']:
+            elif i in ['+','-'] and temp[-1] in ['*','/']:
                 while True:
                     t = temp[-1]
                     if t != '(':
@@ -46,8 +44,7 @@ for i in l:
                     if len(temp) == 0 or t == '(':
                         temp.append(i)
                         break
-
-        if len(temp) == 0 and i != ')':
+        elif len(temp) == 0 and i != ')':
             temp.append(i)
 
 print(temp)
