@@ -13,11 +13,11 @@ def timer(func):
 		print('运行时间是%s' % (stop_time - start_time))
 	return wrapper
 
-@timer   # @timer 就相当于test = timer(test)  装饰器要修哪个函数就把 @装饰器名（@timer）放在被修饰函数上
+@timer   # @timer 就相当于test = timer(算法)  装饰器要修哪个函数就把 @装饰器名（@timer）放在被修饰函数上
 def test():
 	time.sleep(10)
 	print('test函数运行结束')
 
-# test = timer(test)
+# 算法 = timer(算法)
 test()
 

@@ -2,7 +2,7 @@
 # -*-  coding:utf-8 -*-
 
 #
-f = open('test.txt','r+',encoding = 'utf8')
+f = open('算法.txt','r+',encoding = 'utf8')
 
 # flush() 刷新缓存区
 #f.flush()

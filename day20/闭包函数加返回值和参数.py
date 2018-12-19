@@ -20,6 +20,6 @@ def timer(func):
 def test(name,age):
 	time.sleep(5)
 	print('my name is %s age %s' % (name,age))
-	return 'test over'
+	return '算法 over'
 
 test('alex',18)

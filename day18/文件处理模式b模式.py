@@ -4,7 +4,7 @@
 # b模式默认以字节方式操作
 
 # 以字节模式读操作时，不能在open中指定字符编码
-f_r = open('test.txt','rb')
+f_r = open('算法.txt','rb')
 data = f_r.read()
 print(data)
 print(data.decode('utf-8'))

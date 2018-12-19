@@ -6,7 +6,21 @@
 # 查询
 def fetch(data):
 	print('这是查询功能：')
-
+	with open('haproxy.conf') as read_f:
+		flag = False
+		res = []
+		for read_line in read_f:
+			# print(read_line,end = '')
+			if read_line.strip() == data:
+				flag = True
+				continue
+			if flag:
+				if read_line.startswith(' '):
+					print(read_line,end = '')
+					res.append(read_line)
+				else:
+					flag = False
+	return res
 
 # 添加
 def add(data):
@@ -20,6 +34,7 @@ def change(data):
 # 删除
 def delete(data):
 	print('这是删除功能')
+
 
 if __name__ == '__main__':
 	msg = """
@@ -51,3 +66,4 @@ if __name__ == '__main__':
 		data = input('输入你要查询/添加/修改/删除的内容: ')
 
 		res = msg_dic[choice](data)
+		print(res)

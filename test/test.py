@@ -15,8 +15,8 @@ l.append(' ')
 
 print(l)
 
-goal = 'methinks it is a weasel'
-# goal = 'abc'
+# goal = 'methinks it is a weasel'
+goal = 'abcdefghijklmnopqrstuvwxyz'
 
 start_time = time.time()
 
