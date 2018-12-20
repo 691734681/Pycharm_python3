@@ -1,47 +1,17 @@
 #!/usr/local/python3.5/bin
 # -*-  coding:utf-8 -*-
 
-import pprint
 
-class BinaryTree:
-    def __init__(self,rootObj):
-        self.key = rootObj
-        self.leftChild = None
-        self.rightChild = None
-    def insertLeft(self,newNode):
-        if not self.leftChild :
-            self.leftChild = BinaryTree(newNode)
-        else:
-            t = BinaryTree(newNode)
-            t.leftChild = self.leftChild
-            self.leftChild = t
-    def insertRight(self,newNode):
-        if not self.rightChild:
-            self.rightChild = BinaryTree(newNode)
-        else:
-            t = BinaryTree(newNode)
-            t.rightChild = self.rightChild
-            self.rightChild = t
-    def getRightChild(self):
-        return self.rightChild
-    def getLeftChild(self):
-        return self.leftChild
-    def setRootVal(self,obj):
-        self.key = obj
-    def getRootVal(self):
-        return self.key
 
-r = BinaryTree('a')
-pprint.pprint(r.getRootVal())
-pprint.pprint(r.getLeftChild())
-r.insertLeft('b')
-pprint.pprint(r.getLeftChild())
-pprint.pprint(r.getLeftChild().getRootVal())
-r.insertRight('c')
-pprint.pprint(r.getRightChild())
-pprint.pprint(r.getRightChild().getRootVal())
-r.getRightChild().setRootVal('hello')
-pprint.pprint(r.getRightChild().getRootVal())
+"""
+根据数学表达式建立解析树的原则：
+1.如果读入的字符是‘（’，添加新的节点做为当前节点的做子节点，当前节点下降（即当前节点变成刚才创建的左子节点）
+2.如果读入的字符是操作符即加减乘除，将当前节点的值设置为读入的操作符，并添加一个新的节点做为当前节点的右子节点，当前节点下降（即变成刚才创建的右子节点）
+3.如果读入的字符是数字，将当前节点的值设置为该数字，当前节点变成它的父节点
+4.如果读入的字符是‘）’，当前节点变为其父节点
+"""
+
+
 
 
 

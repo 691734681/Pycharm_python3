@@ -7,6 +7,6 @@ f = open('xxx2','a',encoding = 'utf-8')
 print(f.readable())
 print(f.writable())
 
-f.write('算法\n')
+f.write('数据结构\n')
 
 f.close()

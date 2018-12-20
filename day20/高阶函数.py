@@ -11,13 +11,13 @@ def foo():
 
 
 # 实现高阶函数方式一：函数接收一个函数做参数
-# def 算法(func):
+# def 数据结构(func):
 # 	start_time = time.time()
 # 	func()
 # 	stop_time = time.time()
 # 	print('time is %s ' % (stop_time - start_time))
 #
-# 算法(foo)
+# 数据结构(foo)
 
 # 实现高阶函数方式二：返回值是一个参数
 def test(func):

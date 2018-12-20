@@ -44,8 +44,10 @@ for i in l:
                     if len(temp) == 0 or t == '(':
                         temp.append(i)
                         break
-        elif len(temp) == 0 and i != ')':
+        else:
             temp.append(i)
+        # elif len(temp) == 0 and i != ')':
+        #     temp.append(i)
 
 print(temp)
 print(res)
