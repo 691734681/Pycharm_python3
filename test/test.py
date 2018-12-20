@@ -1,41 +1,47 @@
 #!/usr/local/python3.5/bin
 # -*-  coding:utf-8 -*-
 
-import string
-import random
-import time
+import pprint
 
-# l = []
-# for i in range(97,123):
-#     l.append(chr(i))
+class BinaryTree:
+    def __init__(self,rootObj):
+        self.key = rootObj
+        self.leftChild = None
+        self.rightChild = None
+    def insertLeft(self,newNode):
+        if not self.leftChild :
+            self.leftChild = BinaryTree(newNode)
+        else:
+            t = BinaryTree(newNode)
+            t.leftChild = self.leftChild
+            self.leftChild = t
+    def insertRight(self,newNode):
+        if not self.rightChild:
+            self.rightChild = BinaryTree(newNode)
+        else:
+            t = BinaryTree(newNode)
+            t.rightChild = self.rightChild
+            self.rightChild = t
+    def getRightChild(self):
+        return self.rightChild
+    def getLeftChild(self):
+        return self.leftChild
+    def setRootVal(self,obj):
+        self.key = obj
+    def getRootVal(self):
+        return self.key
 
-l = [chr(i) for i in range(97,123)]
-
-l.append(' ')
-
-print(l)
-
-# goal = 'methinks it is a weasel'
-goal = 'abcdefghijklmnopqrstuvwxyz'
-
-start_time = time.time()
-
-while True:
-    t_list = []
-    for i in range(len(goal)):
-        t_list.append(random.choice(l))
-    t_string = ''.join(t_list)
-    if t_string == goal:
-        print(t_string)
-        break
-    print(t_string)
-    continue
-
-stop_time = time.time()
-
-t = stop_time - start_time
-print(t)
-
+r = BinaryTree('a')
+pprint.pprint(r.getRootVal())
+pprint.pprint(r.getLeftChild())
+r.insertLeft('b')
+pprint.pprint(r.getLeftChild())
+pprint.pprint(r.getLeftChild().getRootVal())
+r.insertRight('c')
+pprint.pprint(r.getRightChild())
+pprint.pprint(r.getRightChild().getRootVal())
+r.getRightChild().setRootVal('hello')
+pprint.pprint(r.getRightChild().getRootVal())
 
 
 
