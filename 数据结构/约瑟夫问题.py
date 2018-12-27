@@ -18,4 +18,4 @@ def hotPotato(namelist, num):
     # 循环结束后只剩一个元素
     return simqueue.dequeue()
 
-print(hotPotato(["Bill","David","Susan","Jane","Kent","Brad"],7))
+print(hotPotato(["Bill","David","Susan","Jane","Kent","Brad"],3))
