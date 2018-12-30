@@ -10,6 +10,13 @@
 import sys
 import pprint
 pprint.pprint(sys.path)
+
+"""
+如果想入下面的from语句在本文件中执行不报错，需要将day21目录添加到sys.path路径中
+"""
+import os
+basedir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(basedir)
 # 这里的引入是给上层文件夹中bin使用的
 from module_1 import cal_1
 
