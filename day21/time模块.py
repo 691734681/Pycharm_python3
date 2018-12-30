@@ -44,3 +44,8 @@ print(t)
 t = '2008--10--08 13:11:11'
 t = time.strptime(t,"%Y--%m--%d %H:%M:%S")
 print(t)
+
+
+# datetime模块也可以显示系统定义的时间
+import datetime
+print(datetime.datetime.now())
