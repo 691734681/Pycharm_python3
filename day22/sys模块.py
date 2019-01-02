@@ -1,7 +1,7 @@
 #!/usr/local/python3.5/bin
 # -*-  coding:utf-8 -*-
 
-import sys,os
+import sys,time
 
 # 获取python解释器的版本
 print(sys.version)
@@ -18,3 +18,7 @@ print(sys.path)
 # 获取执行文件时获取的参数
 args = sys.argv
 print(args)
+
+for i in range(100):
+    time.sleep(1)
+    sys.stdout.write('#')
