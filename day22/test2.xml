@@ -1,10 +1,1 @@
-<country>
-    <city name="beijing">
-        <year>2018</year>
-        <gdp checked="yes">10000</gdp>
-    </city>
-    <city name="shanghai">
-        <year>2019</year>
-        <gdp checked="yes">10001</gdp>
-    </city>
-</country>
+<country><city name="beijing"><year>2018</year><gdp checked="yes">10000</gdp></city><city name="shanghai"><year>2019</year><gdp checked="yes">10001</gdp></city></country>
