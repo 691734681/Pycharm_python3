@@ -37,6 +37,7 @@
     <inspection_tool class="PyMethodFirstArgAssignmentInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
     <inspection_tool class="PyMethodOverridingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
     <inspection_tool class="PyMissingConstructorInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+    <inspection_tool class="PyMissingOrEmptyDocstringInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
     <inspection_tool class="PyMissingTypeHintsInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
     <inspection_tool class="PyNamedTupleInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
     <inspection_tool class="PyNonAsciiCharInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
@@ -49,7 +50,7 @@
         </value>
       </option>
     </inspection_tool>
-    <inspection_tool class="PyPep8Inspection" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
       <option name="ignoredErrors">
         <list>
@@ -72,7 +73,6 @@
         </list>
       </option>
     </inspection_tool>
-    <inspection_tool class="PyShadowingNamesInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="PyStatementEffectInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
     <inspection_tool class="PyStringExceptionInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
     <inspection_tool class="PyStringFormatInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
@@ -83,7 +83,7 @@
     <inspection_tool class="PyTypeCheckerInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
     <inspection_tool class="PyUnboundLocalVariableInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
     <inspection_tool class="PyUnnecessaryBackslashInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
-    <inspection_tool class="PyUnreachableCodeInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyUnreachableCodeInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
     <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
       <option name="ignoredIdentifiers">
         <list>
@@ -95,11 +95,6 @@
           <option value="day21.bin2.web1" />
         </list>
       </option>
-    </inspection_tool>
-    <inspection_tool class="SpellCheckingInspection" enabled="false" level="TYPO" enabled_by_default="false">
-      <option name="processCode" value="true" />
-      <option name="processLiterals" value="true" />
-      <option name="processComments" value="true" />
     </inspection_tool>
   </profile>
 </component>
