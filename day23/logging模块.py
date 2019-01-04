@@ -108,6 +108,9 @@ logger,logger2,logger3是一级一级的继承关系，logger默认是root，log
 logger = logging.getLogger()
 logger.setLevel('DEBUG')
 
+logger2 = logging.getLogger('son')
+logger2.setLevel(logging.WARNING)
+
 fh = logging.FileHandler('log_4.log','w')
 sh = logging.StreamHandler()
 
@@ -116,12 +119,19 @@ formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(messag
 fh.setFormatter(formatter)
 sh.setFormatter(formatter)
 
-f = logging.Filter('logger')
-fh.addFilter(f)
+"""
+创建过滤器是如果没有参数，则什么都不过滤
+参数就是创建的logger的名字，过滤器过滤掉不是参数名字的logger所打印的信息
+"""
+f = logging.Filter('son')  # 创建过滤器 # 名字为son的logger会打印出信息
+fh.addFilter(f)   # 将过滤器添加到handler
 sh.addFilter(f)
 
 logger.addHandler(fh)
 logger.addHandler(sh)
+
+logger2.addHandler(fh)
+logger2.addHandler(sh)
 
 logger.debug('debug')
 logger.info('info')
@@ -129,3 +139,8 @@ logger.warning('warning')
 logger.error('error')
 logger.critical('critical')
 
+logger2.debug('debug')
+logger2.info('info')
+logger2.warning('warning')
+logger2.error('error')
+logger2.critical('critical')
