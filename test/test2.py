@@ -3,6 +3,7 @@
 
 import re
 
+"""
 s = '1 + 2 * ( 4 + ( 2 + 1 + 3 + 2 ) )'
 s = s.replace(' ','')
 print(s)
@@ -19,7 +20,7 @@ while len(temp) >= 3:
         sum = int(temp[0]) + int(temp[2])
     temp = str(sum) + temp[3:]
 s = re.sub(reg,temp,s)
-
+"""
 
 
 
