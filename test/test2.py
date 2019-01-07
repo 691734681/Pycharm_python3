@@ -3,24 +3,41 @@
 
 import re
 
-"""
-s = '1 + 2 * ( 4 + ( 2 + 1 + 3 + 2 ) )'
-s = s.replace(' ','')
-print(s)
+s = '1 + 2 * ( 4 + ( 2 + 2 ) )'
+s2 = re.sub('\s+','',s)
 
-reg = r'\([^()]+\)'
-
-res = re.search(reg,s)
-temp = res.group()
-temp = temp[1:-1]
-print(temp)
-while len(temp) >= 3:
-    sum = 0
-    if temp[1] == '+':
-        sum = int(temp[0]) + int(temp[2])
-    temp = str(sum) + temp[3:]
-s = re.sub(reg,temp,s)
 """
+def kong_Ge(s):
+    '''删除多余的空格'''
+    res = re.sub('\s+','',s)
+    return res
+
+def he_Fa(s):
+    '''判断数学表达式是否合法，没有联系操作符，左右括号对称'''
+    res = re.findall('[()]',s)
+    if not res.count('(') == res.count(')'):
+        return '左右括号数量不匹配'
+    res = re.search(r'[+\-*/%]{2,}',s2)
+    if res:
+        return '有多余的操作符'
+"""
+def kuo_Hao(s):
+    '''将括号内的数学表达式计算完并替换'''
+    while True:
+        res = re.search('\([^()]+\)',s)
+        if not res:
+            break
+        res = res.group()[1:-1]
+        while len(res) > 1:
+            sum = 0
+            if res[1] == '+':
+                sum = int(res[0]) + int(res[2])
+            res = str(sum) + res[3:]
+        s = re.s
+
+kuo_Hao(s2)
+
+
 
 
 
