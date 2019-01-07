@@ -38,11 +38,12 @@ def he_Fa(s):
 #
 # print(kuo_Hao(s2))
 
-s = '11+2131+123+12'
-res = re.search('(\d+)([+])(\d+)',s)
-print(res)
-print(res.group())
+s = '1213+-123+-21'
+# res = re.search('[+\-]+',s)
+# print(res.group())
+res = re.search('(\d+)([+\-]+)(\d+)',s)
 print(res.group(0))
 print(res.group(1))
 print(res.group(2))
 print(res.group(3))
+
