@@ -3,7 +3,7 @@
 
 import re
 
-s = '1 + 2 * ( 4 + ( 2 + 2 ) )'
+s = '1 + 2 * ( 4 + ( 2 + 2 ) + ( 1 + 2 ))'
 s2 = re.sub('\s+','',s)
 
 """
@@ -22,26 +22,20 @@ def he_Fa(s):
         return '有多余的操作符'
 """
 def kuo_Hao(s):
-    '''将括号内的数学表达式计算完并替换'''
+    """将括号内的数学表达式计算完并替换"""
     while True:
         res = re.search('\([^()]+\)',s)
         if not res:
             break
+        temp = res.group()
         res = res.group()[1:-1]
-        while len(res) > 1:
+        while not res.isdigit():
             sum = 0
-            if res[1] == '+':
-                sum = int(res[0]) + int(res[2])
-            res = str(sum) + res[3:]
-        s = re.s
-
-kuo_Hao(s2)
 
 
+    return s
 
-
-
-
+print(kuo_Hao(s2))
 
 
 
