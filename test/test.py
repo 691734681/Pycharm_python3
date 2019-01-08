@@ -18,3 +18,14 @@ while len(temp) >= 3:
     temp = str(sum) + temp[3:]
 s = re.sub(reg,temp,s)
 """
+
+"""
+s = '1213+-123+-21'
+res = re.search('[+\-]+',s)
+print(res.group())
+res = re.search('(\d+)([+\-]+)(\d+)',s)
+print(res.group(0))
+print(res.group(1))
+print(res.group(2))
+print(res.group(3))
+"""
