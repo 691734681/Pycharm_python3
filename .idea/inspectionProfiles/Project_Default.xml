@@ -11,7 +11,7 @@
     <inspection_tool class="PyByteLiteralInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
     <inspection_tool class="PyCallingNonCallableInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
     <inspection_tool class="PyClassicStyleClassInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
-    <inspection_tool class="PyCompatibilityInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+    <inspection_tool class="PyCompatibilityInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false">
       <option name="ourVersions">
         <value>
           <list size="2">
@@ -65,6 +65,7 @@
           <option value="E271" />
           <option value="W391" />
           <option value="E305" />
+          <option value="E303" />
         </list>
       </option>
     </inspection_tool>
@@ -74,6 +75,7 @@
           <option value="N802" />
           <option value="N803" />
           <option value="N806" />
+          <option value="N801" />
         </list>
       </option>
     </inspection_tool>

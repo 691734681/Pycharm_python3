@@ -22,28 +22,32 @@ def he_Fa(s):
         return '有多余的操作符'
 """
 
-# def kuo_Hao(s):
-#     """将括号内的数学表达式计算完并替换"""
-#     while True:
-#         res = re.search('\([^()]+\)',s)
-#         if not res:
-#             break
-#         temp = res.group()
-#         res = res.group()[1:-1]
-#         while not res.isdigit():
-#             sum = 0
-#
-#
-#     return s
-#
-# print(kuo_Hao(s2))
+def kuo_Hao(s):
+    """将括号内的数学表达式计算完并替换"""
+    while True:
+        res = re.search('\([^()]+\)',s)
+        if not res:
+            break
+        temp = res.group()
+        res = res.group()[1:-1]
+        while not res.isdigit():
+            temp2 = re.search('(\d+)([+\-]+)(\d+)',res)
+            num1 = temp2.group(1)
+            oper = temp2.group(2)
+            num2 = temp2.group(3)
 
+    return s
+
+print(kuo_Hao(s2))
+
+"""
 s = '1213+-123+-21'
-# res = re.search('[+\-]+',s)
-# print(res.group())
+res = re.search('[+\-]+',s)
+print(res.group())
 res = re.search('(\d+)([+\-]+)(\d+)',s)
 print(res.group(0))
 print(res.group(1))
 print(res.group(2))
 print(res.group(3))
+"""
 
