@@ -25,7 +25,7 @@ class Extender(Super):
     def method(self):
         """method"""
         print('starting extender.method')
-        super.method()
+        super().method()
         print('ending extender.method')
 
 class Provider(Super):
