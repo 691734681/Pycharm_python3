@@ -34,7 +34,7 @@ class Provider(Super):
         """action"""
         print('in provider.action')
 
-if __name__ == __main__:
+if __name__ == '__main__':
     for klass in (Inheritor,Replacer,Extender):
         print(klass.__name__,' ***** ',klass().method())
     print('Provider...')
