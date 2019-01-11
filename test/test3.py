@@ -1,27 +1,32 @@
 #!/usr/local/python3.5/bin
 # -*-  coding:utf-8 -*-
 
-class Test:
-    """Test"""
-    def __init__(self,value):
-        self.value = value
+class Super:
+    def method(self):
+        print('in super.method')
+    def delegate(self):
+        self.action()
 
-    def __add__(self, other):
-        # self.value = self.value + other
-        return Test(self.value + other)
+class Inheritor(Super):
+    pass
 
-    def __mul__(self, other):
-        # self.value = self.value * other
-        return Test(self.value * other)
+class Replacer(Super):
+    def method(self):
+        print('in replace.method')
 
-t = Test('a')
-t += 'b'
-print(t.value)
-t2 = Test('c')
-t2 *= 10
-print(t2.value)
+class Extender(Super):
+    def method(self):
+        print('starting extender.method')
+        super.method()
+        print('ending extender.method')
 
+class Provider(Super):
+    def action(self):
+        print('in provider.action')
 
-
-
+if __name__ == __main__:
+    for klass in (Inheritor,Replacer,Extender):
+        print(klass.__name__,' ***** ',klass().method())
+    print('Provider...')
+    print(Provider().delegate())
 
