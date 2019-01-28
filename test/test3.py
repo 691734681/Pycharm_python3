@@ -37,6 +37,7 @@ class Provider(Super):
 if __name__ == '__main__':
     for klass in (Inheritor,Replacer,Extender):
         print(klass.__name__,' ***** ',klass().method())
+        print()
     print('Provider...')
     print(Provider().delegate())
 
