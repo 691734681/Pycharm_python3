@@ -58,19 +58,20 @@ s = 'alex36wu34lin33yuan35'
 3. 有几个括号则返回几个内容
 """
 s = 'abc def hij klm nop qrs uvw'
-res = re.findall('\w+\s+\w+',s)
-print(res)
-res = re.findall('(\w+)\s+\w+',s)
-print(res)
-res = re.findall('((\w+)\s+\w+)',s)
-print(res)
+# res = re.findall('\w+\s+\w+',s)
+# print(res)
+# res = re.findall('(\w+)\s+\w+',s)
+# print(res)
+# res = re.findall('((\w+)\s+\w+)',s)
+# print(res)
 
 # 分组的另一种写法
-# s = 'alex36wu34lin33yuan35'
-# res = re.search('(?P<name>[a-z]+)(?P<age>\d+)',s)
-# print(res)
-# print(res.group('name'))
-# print(res.group('age'))
+s = 'alex36wu34lin33yuan35'
+res = re.search('(?P<name>[a-z]+)(?P<age>\d+)',s)
+print(res)
+print(res.group())
+print(res.group('name'))
+print(res.group('age'))
 
 
 

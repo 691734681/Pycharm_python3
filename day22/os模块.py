@@ -62,20 +62,20 @@ import os
 # print(res)
 
 # 获取文件的绝对路径
-# path = os.path.abspath('os模块.py')
-# print(path)
+path = os.path.abspath('os模块.py')
+print(path)
 
 # 将指定路径分割成路径和文件名以元组形式返回 (参数是绝对路径)
 # t = os.path.split(os.path.abspath('os模块.py'))
 # print(t)
 
 # 获取指定文件的路径 (参数是绝对路径)
-# path = os.path.dirname(os.path.abspath('os模块.py'))
-# print(path)
+path = os.path.dirname(os.path.abspath('os模块.py'))
+print(path)
 
 # 获取指定路径中文件的名称
-# file_name = os.path.basename(os.path.abspath('os模块.py'))
-# print(file_name)
+file_name = os.path.basename(os.path.abspath('os模块.py'))
+print(file_name)
 
 # 判断文件是否存在
 # b = os.path.exists('os模块.py')

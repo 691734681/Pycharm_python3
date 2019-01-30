@@ -7,7 +7,7 @@ res = 'sb' if name == 'alex' else 'shuai'
 print(res)
 
 # 列表解析 ：生成列表的一种方法
-l = [ i for i in range(5)]
+l = [i for i in range(5)]
 print(l)
 l2 = [i for i in range(10) if i % 2 == 0]
 print(l2)

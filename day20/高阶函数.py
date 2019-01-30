@@ -9,7 +9,7 @@ def foo():
 	time.sleep(5)
 	print('foo')
 
-
+print(foo)
 # 实现高阶函数方式一：函数接收一个函数做参数
 # def 数据结构(func):
 # 	start_time = time.time()
@@ -28,5 +28,5 @@ def test(func):
 	return func
 
 foo = test(foo)
-
+print(foo)
 
