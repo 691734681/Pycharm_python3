@@ -2,16 +2,16 @@
 # -*-  coding:utf-8 -*-
 
 import random
-
 l = []
-for i in range(6):
-    t = random.randint(1,33)
-    if len(l) != 6:
+while True:
+    if len(l) == 6:
+        break
+    t = random.randint(1,34)
+    if t in l:
+        continue
+    else:
         l.append(t)
-
-i = random.randint(1,16)
-
-print(l)
 l.sort()
+l.append(random.randint(1,17))
 print(l)
-print(i)
+

@@ -1,10 +1,10 @@
 #!/usr/local/python3.5/bin
 # -*-  coding:utf-8 -*-
 
-class Indexer:
-    def __getitem__(self, index):
-        return index ** 2
+import string
 
-I = Indexer()
-l = [I[i] for i in range(5)]
+s = string.ascii_letters
+n = string.digits
+l = list(s)
+l.extend(list(n))
 print(l)

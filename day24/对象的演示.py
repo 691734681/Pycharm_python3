@@ -30,4 +30,4 @@ dog1.shout会报错，因为实例在调用方法时，会将自己传入进去�
 TypeError: shout() takes 0 positional arguments but 1 was given
 """
 # dog1.shout()
-
+Dog.shout()
